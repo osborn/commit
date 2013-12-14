@@ -11,7 +11,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Commit</a>
+          <a class="navbar-brand" href="{{ URL::to('/') }}">Commit</a>
         </div>
         <div class="navbar-collapse collapse">
           
