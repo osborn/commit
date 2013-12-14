@@ -4,8 +4,13 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
+<<<<<<< HEAD
 		"laravel/framework": "4.0.*",
 		"twitter/bootstrap": "*"
+=======
+		"laravel/framework": "4.1.*",
+		"fideloper/proxy": "dev-master"
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 	},
 	"autoload": {
 		"classmap": [
@@ -32,5 +37,9 @@
 	"config": {
 		"preferred-install": "dist"
 	},
+<<<<<<< HEAD
 	"minimum-stability": "dev"
+=======
+	"minimum-stability": "stable"
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 }

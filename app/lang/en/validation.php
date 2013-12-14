@@ -9,7 +9,11 @@ return array(
 	|
 	| The following language lines contain the default error messages used by
 	| the validator class. Some of these rules have multiple versions such
+<<<<<<< HEAD
 	| such as the size rules. Feel free to tweak each of these messages.
+=======
+	| as the size rules. Feel free to tweak each of these messages here.
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 	|
 	*/
 
@@ -22,10 +26,17 @@ return array(
 	"array"            => "The :attribute must be an array.",
 	"before"           => "The :attribute must be a date before :date.",
 	"between"          => array(
+<<<<<<< HEAD
 		"numeric" => "The :attribute must be between :min - :max.",
 		"file"    => "The :attribute must be between :min - :max kilobytes.",
 		"string"  => "The :attribute must be between :min - :max characters.",
 		"array"   => "The :attribute must have between :min - :max items.",
+=======
+		"numeric" => "The :attribute must be between :min and :max.",
+		"file"    => "The :attribute must be between :min and :max kilobytes.",
+		"string"  => "The :attribute must be between :min and :max characters.",
+		"array"   => "The :attribute must have between :min and :max items.",
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 	),
 	"confirmed"        => "The :attribute confirmation does not match.",
 	"date"             => "The :attribute is not a valid date.",

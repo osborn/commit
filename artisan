@@ -29,8 +29,11 @@ require __DIR__.'/bootstrap/autoload.php';
 
 $app = require_once __DIR__.'/bootstrap/start.php';
 
+<<<<<<< HEAD
 $app->boot();
 
+=======
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 /*
 |--------------------------------------------------------------------------
 | Load The Artisan Console Application
@@ -43,6 +46,11 @@ $app->boot();
 |
 */
 
+<<<<<<< HEAD
+=======
+$app->setRequestForConsoleEnvironment();
+
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 $artisan = Illuminate\Console\Application::start($app);
 
 /*
