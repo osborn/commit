@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'commit_db',
-			'username'  => 'osborn',
-			'password'  => 'Rid5sv3K',
+			'host'      => 'tunnel.pagodabox.com:3306',
+			'database'  => 'commit',
+			'username'  => 'jolene',
+			'password'  => 'h28NVymo',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
