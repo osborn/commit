@@ -32,42 +32,49 @@
     </div>
 
 @section('content')
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <h3>To join Commit, sign up below...it's free!</h3>
 
-  <h3>To join Commit, sign up below...it's free!</h3>
+    <!-- if there are creation errors, they will show here -->
+    {{ HTML::ul($errors->all()) }}
 
-  <!-- if there are creation errors, they will show here -->
-  {{ HTML::ul($errors->all()) }}
+    @if (Session::has('message'))
+            <div class="alert alert-danger">{{ Session::get('message') }}</div>
+          @endif
 
-  @if (Session::has('message'))
-          <div class="alert alert-danger">{{ Session::get('message') }}</div>
-        @endif
+    {{ Form::open(array('url' => 'developers')) }}
 
-  {{ Form::open(array('url' => 'developers')) }}
+      <div class="form-group">
+        {{ Form::label('name', 'Name') }}
+        {{ Form::text('name', Input::old('name'), array('class' => 'form-control', 'placeholder' => "Enter full name" )) }}
+      </div>
 
-    <div class="form-group">
-      {{ Form::label('name', 'Name') }}
-      {{ Form::text('name', Input::old('name'), array('class' => 'form-control', 'placeholder' => "Enter full name" )) }}
-    </div>
+      <div class="form-group">
+        {{ Form::label('email', 'Email') }}
+        {{ Form::email('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => "Enter email")) }}
+      </div>
 
-    <div class="form-group">
-      {{ Form::label('email', 'Email') }}
-      {{ Form::email('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => "Enter email")) }}
-    </div>
+      <div class="form-group">
+        {{ Form::label('city', 'City') }}
+        {{ Form::select('city', array('Other' => 'Select a City', 'Accra' => 'Accra', 'Kumasi' => 'Kumasi', 'Cape Coast' => 'Cape Coast', 'Tamale' => 'Tamale', 'Takoradi' => 'Takoradi', 'Ho' => 'Ho'), Input::old('city'), array('class' => 'form-control')) }}
+      </div>
 
-    <div class="form-group">
-      {{ Form::label('city', 'City') }}
-      {{ Form::select('city', array('Other' => 'Select a City', 'Accra' => 'Accra', 'Kumasi' => 'Kumasi', 'Cape Coast' => 'Cape Coast', 'Tamale' => 'Tamale', 'Takoradi' => 'Takoradi', 'Ho' => 'Ho'), Input::old('city'), array('class' => 'form-control')) }}
-    </div>
+      <div class="form-group">
+        {{ Form::label('password', 'Password') }}
+        {{ Form::password('password', array('class' => 'form-control', 'placeholder' => "Enter password")) }}
+      </div>
 
-    <div class="form-group">
-      {{ Form::label('password', 'Password') }}
-      {{ Form::password('password', array('class' => 'form-control', 'placeholder' => "Enter password")) }}
-    </div>
+      <p>By clicking Join Commit, you agree to Commit's <a>User Agreement</a>, <a>Privacy Policy</a> and <a href=""> Cookie Policy<a>.</p>
 
-    <p>By clicking Join Commit, you agree to Commit's <a>User Agreement</a>, <a>Privacy Policy</a> and <a href=""> Cookie Policy<a>.</p>
+      {{ Form::submit('Join Commit', array('class' => 'btn btn-primary')) }}
 
-    {{ Form::submit('Join Commit', array('class' => 'btn btn-primary')) }}
+    {{ Form::close() }}
+  </div>
+  <div class="col-md-3"></div>
+</div>
 
-  {{ Form::close() }}
+  
 
 @stop
