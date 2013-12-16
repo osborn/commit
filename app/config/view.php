@@ -26,6 +26,10 @@ return array(
 	|
 	*/
 
+<<<<<<< HEAD
 	'pagination' => 'pagination::simple',
+=======
+	'pagination' => 'pagination::slider-3',
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 
 );

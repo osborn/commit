@@ -11,12 +11,20 @@ return array(
 	| requests. By default, we will use the lightweight native driver but
 	| you may specify any of the other wonderful drivers provided here.
 	|
+<<<<<<< HEAD
 	| Supported: "native", "cookie", "database", "apc",
+=======
+	| Supported: "file", "cookie", "database", "apc",
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 	|            "memcached", "redis", "array"
 	|
 	*/
 
+<<<<<<< HEAD
 	'driver' => 'native',
+=======
+	'driver' => 'redis',
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 
 	/*
 	|--------------------------------------------------------------------------
@@ -25,12 +33,21 @@ return array(
 	|
 	| Here you may specify the number of minutes that you wish the session
 	| to be allowed to remain idle before it expires. If you want them
+<<<<<<< HEAD
 	| to immediately expire when the browser closes, set it to zero.
+=======
+	| to immediately expire on the browser closing, set that option.
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 	|
 	*/
 
 	'lifetime' => 120,
 
+<<<<<<< HEAD
+=======
+	'expire_on_close' => false,
+
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 	/*
 	|--------------------------------------------------------------------------
 	| Session File Location
@@ -49,9 +66,15 @@ return array(
 	| Session Database Connection
 	|--------------------------------------------------------------------------
 	|
+<<<<<<< HEAD
 	| When using the "database" session driver, you may specify the database
 	| connection that should be used to manage your sessions. This should
 	| correspond to a connection in your "database" configuration file.
+=======
+	| When using the "database" or "redis" session drivers, you may specify a
+	| connection that should be used to manage these sessions. This should
+	| correspond to a connection in your database configuration options.
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 	|
 	*/
 
@@ -122,4 +145,20 @@ return array(
 
 	'domain' => null,
 
+<<<<<<< HEAD
+=======
+	/*
+	|--------------------------------------------------------------------------
+	| HTTPS Only Cookies
+	|--------------------------------------------------------------------------
+	|
+	| By setting this option to true, session cookies will only be sent back
+	| to the server if the browser has a HTTPS connection. This will keep
+	| the cookie from being sent to you if it can not be done securely.
+	|
+	*/
+
+	'secure' => false,
+
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 );

@@ -13,15 +13,22 @@
 
 $app = new Illuminate\Foundation\Application;
 
+<<<<<<< HEAD
 $app->redirectIfTrailingSlash();
 
+=======
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 /*
 |--------------------------------------------------------------------------
 | Detect The Application Environment
 |--------------------------------------------------------------------------
 |
 | Laravel takes a dead simple approach to your application environments
+<<<<<<< HEAD
 | so you can just specify a machine name or HTTP host that matches a
+=======
+| so you can just specify a machine name for the host that matches a
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 | given environment, then we will automatically detect it for you.
 |
 */
@@ -50,7 +57,11 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 | Load The Application
 |--------------------------------------------------------------------------
 |
+<<<<<<< HEAD
 | Here we will load the Illuminate application. We'll keep this is in a
+=======
+| Here we will load this Illuminate application. We will keep this in a
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 | separate location so we can isolate the creation of an application
 | from the actual running of the application with a given request.
 |

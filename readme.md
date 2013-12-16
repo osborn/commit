@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+# Laravel 4 Pagoda Box Quickstart
+
+Provides a Quickstart installation of Laravel 4 including a preconfigured MySQL database, automatic [Composer](http://getcomposer.org) package installation, and Laravel database migrations.
+
+## Pagoda Box Installation
+
+You can install the Quickstart either directly from the [Pagoda Box App Cafe](https://pagodabox.com/cafe/briankiewel/laravel-4), as a Quickstart through your Pagoda Box dashboard during the new application creation process, or by cloning the [GitHub repository](https://github.com/briankiewel/pagodabox-laravel-4) and pushing it to an empty Pagoda Box application repository.
+
+## Local Development Installation
+
+* Clone repository locally  
+  `git clone git@github.com:briankiewel/pagodabox-laravel-4.git`
+* If [Composer](http://getcomposer.org/) is not already installed locally, install it
+* Install the Laravel dependencies  
+  `composer install`
+* Edit `bootstrap/start.php` and add your local machine's hostname to the `local` element in the `detectEnvironment` call parameter array
+* Set your local web server to use the `public` folder as the document root
+
+Last updated: 12/12/2013
+
+---
+
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 ## Laravel PHP Framework
 
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)

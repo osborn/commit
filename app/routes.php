@@ -13,6 +13,7 @@
 
 Route::get('/', function()
 {
+<<<<<<< HEAD
 	return View::make('index');
 });
 
@@ -25,3 +26,7 @@ Route::get('developers/logout', 'DeveloperController@logout');
 Route::resource('developers', 'DeveloperController');
 
 Route::resource('jobs', 'JobController');
+=======
+	return View::make('hello');
+});
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26

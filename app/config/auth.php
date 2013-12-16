@@ -8,7 +8,11 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| This option controls the authentication driver that will be utilized.
+<<<<<<< HEAD
 	| This drivers manages the retrieval and authentication of the users
+=======
+	| This driver manages the retrieval and authentication of the users
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
 	| attempting to get access to protected areas of your application.
 	|
 	| Supported: "database", "eloquent"
@@ -68,4 +72,8 @@ return array(
 
 	),
 
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> 796cee92fa5aa2c766a790c117f1385936f13a26
