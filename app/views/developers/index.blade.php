@@ -48,11 +48,24 @@
 		      {{ Form::select('city', array('Other' => 'Select a City', 'Accra' => 'Accra', 'Kumasi' => 'Kumasi', 'Cape Coast' => 'Cape Coast', 'Tamale' => 'Tamale', 'Takoradi' => 'Takoradi', 'Ho' => 'Ho'), Input::old('city'), array('class' => 'form-control')) }}
 		    </div>
 
+		    <div class="form-group">
+             {{ Form::label('skills', 'Skills') }}
+             <p>Press enter after each skill.</p>
+             {{ Form::text('skills', null, array('data-role' => 'tagsinput', 'placeholder' => 'Add tags')) }}
+            </div>
+
 		    {{ Form::submit('Search', array('class' => 'btn btn-primary')) }}
 
 		  {{ Form::close() }}
 	</div>
 	<div class="col-md-8">
+		<!-- will be used to show any messages -->
+        @if (Session::has('message'))
+          <div class="alert alert-info">{{ Session::get('message') }}
+          	<p>Please try again</p>
+          </div>
+        @endif
+
 		@foreach($developer as $key => $value)
 			<div class="row">
 				@if($value->image_path)
@@ -93,7 +106,7 @@
 			</div>
 		@endforeach
 
-		{{ $developer->links(); }}
+		
 	</div>
 </div>
 

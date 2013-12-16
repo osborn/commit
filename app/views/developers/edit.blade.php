@@ -224,10 +224,66 @@
 
         @endforeach
 
-      </div>
-    </div>
-  </div>
-</div>
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
+          Add Another
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Experience</h4>
+              </div>
+              <div class="modal-body">
+                {{ Form::open(array('route' => array('developers.update', $developer->id), 'method' => 'PUT'))}}
+                  <div class="form-group">
+                    {{ Form::label('company', 'Company')}}
+                    {{ Form::text('company', null, array('class' => 'form-control')) }}
+                  </div>
+
+                  <div class="form-group">
+                    {{ Form::label('role', 'Role')}}
+                    {{ Form::text('role', null, array('class' => 'form-control')) }}
+                  </div>
+
+                  <div class="form-group">
+                    {{ Form::label('description', 'Description') }}
+                    {{ Form::textarea('description', null, array('class' => 'form-control')) }}
+                  </div>
+
+                  <div class="form-group">
+                    {{ Form::label('start_date', 'Date Started')}}
+                    <input name="start_date" type="date" class="form-control">
+                  </div>
+
+                   <div class="form-group">
+                    {{ Form::label('end_date', 'Date Ended')}}
+                    <input name="end_date" type="date" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    {{ Form::hidden('type', 'experience') }}
+                  </div>
+
+                  {{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
+
+                {{ Form::close() }}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+              </div>
+            </div>
+          </div>
+        </div>
 
 
 @stop

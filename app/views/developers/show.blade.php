@@ -62,12 +62,15 @@
 
       <!-- delete the developer (uses the destroy method DESTROY /nerds/{id} -->
       <!-- only user with email address osborn@meltwater,org is allowed to delete users -->
-      @if(Auth::user()->email=='osborn@meltwater.org')
-        {{ Form::open(array('url' => 'developers/' . $developer->id, 'class' => 'pull-right')) }}
-          {{ Form::hidden('_method', 'DELETE') }}
-          {{ Form::submit('Delete this Developer', array('class' => 'btn btn-warning')) }}
-        {{ Form::close() }}
+      @if(Auth::check())
+        @if(Auth::user()->email=='osborn@meltwater.org')
+          {{ Form::open(array('url' => 'developers/' . $developer->id, 'class' => 'pull-right')) }}
+            {{ Form::hidden('_method', 'DELETE') }}
+            {{ Form::submit('Delete this Developer', array('class' => 'btn btn-warning')) }}
+          {{ Form::close() }}
+        @endif
       @endif
+      
 
     </div>
   </div>
@@ -139,18 +142,19 @@
             <th>Start Date</th>
             <th>End Date</th>
           </tr>
-          <tr>
+          
             <!-- getting education model -->
             @if ($project= User::find($developer->id)->projects) @endif
 
             @foreach($project as $experience)
+            <tr>
               <td>{{ $experience->company }}</td>
               <td>{{ $experience->role }}</td>
               <td>{{ $experience->description }}</td>
               <td>{{ $experience->start_date }}</td>
               <td>{{ $experience->end_date }}</td>
+            </tr>
             @endforeach
-          </tr>
         </table>
       </div>
     </div>

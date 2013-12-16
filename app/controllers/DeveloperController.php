@@ -211,7 +211,6 @@ class DeveloperController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
 		// delete
 		$developer = User::find($id);
 		$developer->delete();
@@ -239,10 +238,23 @@ class DeveloperController extends \BaseController {
 
 	public function search(){
 		$location = Input::get('city');
-		$developer = User::where('location', $location)->paginate(5);
+		$skills = Input::get('skills');
+		$skillset = explode(",", $skills);
+		$developers = User::where('location', $location)->paginate(10);
+		$developer = array();
+		foreach ($developers as $dev) {
+			foreach ($skillset as $skill) {
+				if (strpos(strtoupper($dev->skills), strtoupper($skill)) !==false) {
+					array_push($developer, $dev);
+					break;
+				}
+			}
+		}
+
+		if (count($developer == 0)) {
+			Session::flash('message', 'No developer found with query parameters.');
+		}
 		return View::make('developers.index')->with('developer', $developer);
 		
 	}
-		
-
 }
