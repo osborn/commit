@@ -55,6 +55,8 @@
           <div class="alert alert-info">{{ Session::get('message') }}</div>
         @endif
 
+        <!-- Albert added to trick git -->
+
         {{ Form::model($developer, array('route' => array('developers.update', $developer->id), 'method' => 'PUT', 'files' => true)) }}
 
           <div class="form-group">
